@@ -8,7 +8,7 @@
  * License:     GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: bulk-plugin-toggle
- * Description: Adds "Toggle" as a bulk action for the plugins listing to toggle activation state for selected plugins.
+ * Description: Adds "Toggle" as a bulk action for the plugins listing to toggle the activation state for selected plugins.
  *
  * Compatible with WordPress 4.9+ through 5.4+.
  *
