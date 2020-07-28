@@ -78,7 +78,13 @@ class c2c_Bulk_Plugin_Toggle {
 	}
 
 	public static function add_bulk_toggle( $actions ) {
-		if ( ! isset( $_GET['plugin_status'] ) || in_array( $_GET['plugin_status'], [ 'all', 'upgrade' ] ) ) {
+		$valid_plugin_statuses = [ 'all', 'upgrade' ];
+
+		if (
+			! isset( $actions['toggle-selected'] )
+		&&
+			( ! isset( $_GET['plugin_status'] ) || in_array( $_GET['plugin_status'], $valid_plugin_statuses ) )
+		) {
 			$actions['toggle-selected'] = __( 'Toggle', 'bulk-plugin-toggle' );
 		}
 
