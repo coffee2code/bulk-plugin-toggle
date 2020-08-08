@@ -317,8 +317,8 @@ class c2c_Bulk_Plugin_Toggle {
 		);
 	}
 
-}
+} // end c2c_Bulk_Plugin_Toggle
 
 add_action( 'plugins_loaded', [ 'c2c_Bulk_Plugin_Toggle', 'init' ] );
 
-endif;
+endif;  // end if !class_exists()
