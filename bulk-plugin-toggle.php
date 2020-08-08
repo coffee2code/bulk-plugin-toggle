@@ -291,14 +291,10 @@ class c2c_Bulk_Plugin_Toggle {
 		$did_deactivations = self::deactivate_plugins( $plugins_to_deactivate );
 
 		if ( ! $did_activation && ! $did_deactivations ) {
-			wp_redirect( self_admin_url( "plugins.php?plugin_status=$status&paged=$page&s=$s" ) );
-			exit;
+			return $sendback;
 		}
 
-		wp_redirect( self_admin_url( "plugins.php?toggle-multi=true&plugin_status=$status&paged=$page&s=$s" ) );
-		exit;
-
-		return $sendback;
+		return self_admin_url( "plugins.php?toggle-multi=true&plugin_status=$status&paged=$page&s=$s" );
 	}
 
 	/**
