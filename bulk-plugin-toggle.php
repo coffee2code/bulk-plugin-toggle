@@ -46,6 +46,11 @@ if ( ! class_exists( 'c2c_Bulk_Plugin_Toggle' ) ) :
 class c2c_Bulk_Plugin_Toggle {
 	protected static $show_admin_notice = false;
 
+	/**
+	 * Initializes plugin.
+	 *
+	 * @since 1.0
+	 */
 	public static function init() {
 		add_action( 'admin_init',                  [ __CLASS__, 'remove_query_var' ] );
 		add_filter( 'bulk_actions-plugins',        [ __CLASS__, 'add_bulk_toggle' ] );
@@ -53,10 +58,24 @@ class c2c_Bulk_Plugin_Toggle {
 		add_action( 'pre_current_active_plugins',  [ __CLASS__, 'add_admin_notice' ] );
 	}	
 
+	/**
+	 * Removes the 'toggle-multi' query variable.
+	 *
+	 * @since 1.0
+	 */
 	public static function remove_query_var() {
 		$_SERVER['REQUEST_URI'] = remove_query_arg( [ 'toggle-multi' ], $_SERVER['REQUEST_URI'] );
 	}
 
+	/**
+	 * Checks users permissions for being able to generally toggle plugins.
+	 *
+	 * @since 1.0
+	 *
+	 * @param bool $die_with_error Optional. Die with an error if user does not
+	 *                             have permissions? Default true.
+	 * @return bool
+	 */
 	public static function check_user_permissions( $die_with_error = true ) {
 		$permitted = true;
 
@@ -77,6 +96,14 @@ class c2c_Bulk_Plugin_Toggle {
 		return $permitted;
 	}
 
+	/**
+	 * Adds the toggle option to the list of bulk actions.
+	 *
+	 * @since 1.0
+	 *
+	 * @param array $actions Associated array of bulk action keys and labels.
+	 * @return array
+	 */
 	public static function add_bulk_toggle( $actions ) {
 		$valid_plugin_statuses = [ 'all', 'upgrade' ];
 
@@ -91,7 +118,16 @@ class c2c_Bulk_Plugin_Toggle {
 		return $actions;
 	}
 
-	protected static function activate_plugins( $plugins ) {
+	/**
+	 * Activates plugins.
+	 *
+	 * Largely adapted from 'activate-selected' switch branch of `wp-admin/plugins.php`.
+	 *
+	 * @since 1.0
+	 *
+	 * @param array $plugins Array of plugins to activate.
+	 * @return bool True if there were plugins to activate, else false.
+	 */
 		if ( is_network_admin() ) {
 			foreach ( $plugins as $i => $plugin ) {
 				// Only activate plugins which are not already network activated.
@@ -137,6 +173,16 @@ class c2c_Bulk_Plugin_Toggle {
 		return true;
 	}
 
+	/**
+	 * Deactivates plugins.
+	 *
+	 * Largely adapted from 'deactivate-selected' switch branch of `wp-admin/plugins.php`.
+	 *
+	 * @since 1.0
+	 *
+	 * @param array $plugins Array of plugins to deactivate.
+	 * @return bool True if there were plugins to deactivate, else false.
+	 */
 	protected static function deactivate_plugins( $plugins ) {
 		// Do not deactivate plugins which are already deactivated.
 		if ( is_network_admin() ) {
@@ -173,6 +219,16 @@ class c2c_Bulk_Plugin_Toggle {
 		return true;
 	}
 
+	/**
+	 * Splits an array of plugins into two lists according to whether a toggle
+	 * would activate a plugin or deactivate a plugin.
+	 *
+	 * @since 1.0
+	 *
+	 * @return array The first item of the array is a list of plugins that
+	 *               get activated, the second item is a  list of plugins
+	 *               that should get deactivated.
+	 */
 	protected static function split_plugins( $plugins ) {
 		$to_activate = $to_deactivate = [];
 
@@ -190,6 +246,15 @@ class c2c_Bulk_Plugin_Toggle {
 		return [ $to_activate, $to_deactivate ];
 	}
 
+	/**
+	 * Handles bulk toggle plugin submission.
+	 *
+	 * @since 1.0
+	 *
+	 * @param string $sendback The redirect URL.
+	 * @param string $action   The action being taken.
+	 * @param array  $plugins  Array of plugins to toggle.
+	 */
 	public static function handle_bulk_toggle( $sendback, $action, $plugins ) {
 		global $page, $s, $status;
 
@@ -227,6 +292,11 @@ class c2c_Bulk_Plugin_Toggle {
 		return $sendback;
 	}
 
+	/**
+	 * Adds admin notice affirming when plugins have been successfully toggled.
+	 *
+	 * @since 1.0
+	 */
 	public static function add_admin_notice() {
 		if ( empty( $_GET[ 'toggle-multi' ] ) ) {
 			return;
