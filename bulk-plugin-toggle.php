@@ -134,9 +134,11 @@ class c2c_Bulk_Plugin_Toggle {
 	 *
 	 * @since 1.0
 	 *
-	 * @param array $plugins Array of plugins to activate.
+	 * @param array $plugins     Array of plugins to activate.
+	 * @param bool  $do_redirect Perform a redirect after plugin activation? Default true.
 	 * @return bool True if there were plugins to activate, else false.
 	 */
+	protected static function activate_plugins( $plugins, $do_redirect = true ) {
 		if ( is_network_admin() ) {
 			foreach ( $plugins as $i => $plugin ) {
 				// Only activate plugins which are not already network activated.
@@ -161,7 +163,8 @@ class c2c_Bulk_Plugin_Toggle {
 			return false;
 		}
 
-		activate_plugins( $plugins, self_admin_url( 'plugins.php?error=true' ), is_network_admin() );
+		$redirect_url = $do_redirect ? self_admin_url( 'plugins.php?error=true' ) : '';
+		activate_plugins( $plugins, $redirect_url, is_network_admin() );
 
 		if ( ! is_network_admin() ) {
 			$recent = (array) get_option( 'recently_activated' );
