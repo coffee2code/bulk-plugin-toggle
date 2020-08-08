@@ -47,6 +47,15 @@ class c2c_Bulk_Plugin_Toggle {
 	protected static $show_admin_notice = false;
 
 	/**
+	 * Returns version of the plugin.
+	 *
+	 * @since 1.0
+	 */
+	public static function version() {
+		return '1.0';
+	}
+
+	/**
 	 * Initializes plugin.
 	 *
 	 * @since 1.0
