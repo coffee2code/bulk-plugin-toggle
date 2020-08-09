@@ -277,8 +277,7 @@ class c2c_Bulk_Plugin_Toggle {
 		}
 
 		if ( empty( $plugins ) ) {
-			wp_redirect( self_admin_url( "plugins.php?plugin_status=$status&paged=$page&s=$s" ) );
-			exit;
+			return $sendback;
 		}
 
 		// Check user permissions.
