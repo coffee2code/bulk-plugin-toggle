@@ -238,9 +238,9 @@ class c2c_Bulk_Plugin_Toggle {
 	 *
 	 * @since 1.0
 	 *
-	 * @return array The first item of the array is a list of plugins that
-	 *               get activated, the second item is a  list of plugins
-	 *               that should get deactivated.
+	 * @return array The first item of the array is a list of plugins that are
+	 *               inactive and should get activated, the second item is a
+	 *               list of plugins that are active and should get deactivated.
 	 */
 	protected static function split_plugins( $plugins ) {
 		$to_activate = $to_deactivate = [];
