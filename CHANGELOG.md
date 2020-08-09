@@ -1,4 +1,4 @@
 # Changelog
 
-## _(in-progress)_
+## 1.0 _(2020-08-07)_
 * Initial public release.

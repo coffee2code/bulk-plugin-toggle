@@ -43,8 +43,13 @@ Yes.
 
 == Changelog ==
 
+= 1.0 (2020-08-07) =
+* Initial release
+
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/bulk-plugin-toggle/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
 
+= 1.0 =
+Initial public release.
