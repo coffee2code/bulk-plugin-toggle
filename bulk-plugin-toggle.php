@@ -151,6 +151,7 @@ class c2c_Bulk_Plugin_Toggle {
 				// Only activate plugins which are not already active and are not network-only when on Multisite.
 				if ( is_plugin_active( $plugin ) || ( is_multisite() && is_network_only_plugin( $plugin ) ) ) {
 					unset( $plugins[ $i ] );
+					continue;
 				}
 				// Only activate plugins which the user can activate.
 				if ( ! current_user_can( 'activate_plugin', $plugin ) ) {
