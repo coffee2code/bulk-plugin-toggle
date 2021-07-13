@@ -110,7 +110,7 @@ class c2c_Bulk_Plugin_Toggle {
 	 *
 	 * @since 1.0
 	 *
-	 * @param array $actions Associated array of bulk action keys and labels.
+	 * @param array $actions Associative array of bulk action keys and labels.
 	 * @return array
 	 */
 	public static function add_bulk_toggle( $actions ) {
