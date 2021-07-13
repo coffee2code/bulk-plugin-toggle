@@ -10,7 +10,7 @@
  * Text Domain: bulk-plugin-toggle
  * Description: Adds "Toggle" as a bulk action for the plugins listing to toggle the activation state for selected plugins.
  *
- * Compatible with WordPress 4.9+ through 5.4+.
+ * Compatible with WordPress 4.9+ through 5.7+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
