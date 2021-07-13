@@ -15,6 +15,8 @@ Adds "Toggle" as a bulk action for the plugins listing to toggle the activation 
 
 This plugin adds "Toggle" as a bulk action for the plugins listing to toggle the activation state for selected plugins.
 
+From the admin listing of plugins you can now select multiple plugins and choose "Toggle" from the "Bulk actions" dropdown. When applied, all selected plugins that are currently activated will become deactivated, and all selected plugins that are currently deactivated will become activated.
+
 Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/bulk-plugin-toggle/) | [Plugin Directory Page](https://wordpress.org/plugins/bulk-plugin-toggle/) | [GitHub](https://github.com/coffee2code/bulk-plugin-toggle/) | [Author Homepage](https://coffee2code.com/)
 
 

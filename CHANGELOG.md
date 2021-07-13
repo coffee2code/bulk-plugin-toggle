@@ -2,6 +2,7 @@
 
 ## _(in-progress)_
 * Change: Note compatibility through WP 5.7+
+* Change: Add a tad more to the plugin's longer description
 * Change: Update copyright date (2021)
 * Change: Trivial code tweaks
 * Change: Fix typo in inline parameter documentation
