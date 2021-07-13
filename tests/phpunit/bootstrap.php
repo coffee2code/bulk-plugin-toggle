@@ -27,7 +27,7 @@ if ( ! file_exists( $_tests_dir . '/includes/functions.php' ) ) {
 // Give access to tests_add_filter() function.
 require_once $_tests_dir . '/includes/functions.php';
 
-define( 'C2C_BULK_PLUGIN_TOGGLE_PLUGIN_DIR', dirname( __DIR__ ) );
+define( 'C2C_BULK_PLUGIN_TOGGLE_PLUGIN_DIR', dirname( __DIR__, 2 ) );
 
 /**
  * Manually load the plugin being tested.
