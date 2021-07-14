@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Bulk Plugin Toggle
- * Version:     1.0
+ * Version:     1.0.1
  * Plugin URI:  https://coffee2code.com/wp-plugins/bulk-plugin-toggle/
  * Author:      Scott Reilly
  * Author URI:  https://coffee2code.com/
@@ -18,7 +18,7 @@
  *
  * @package Bulk_Plugin_Toggle
  * @author  Scott Reilly
- * @version 1.0
+ * @version 1.0.1
  */
 
 /*
@@ -52,7 +52,7 @@ class c2c_Bulk_Plugin_Toggle {
 	 * @since 1.0
 	 */
 	public static function version() {
-		return '1.0';
+		return '1.0.1';
 	}
 
 	/**

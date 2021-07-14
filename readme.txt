@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.9
 Tested up to: 5.7
 Requires PHP: 5.4
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 Adds "Toggle" as a bulk action for the plugins listing to toggle the activation state for selected plugins.
 
@@ -45,6 +45,14 @@ Yes.
 
 == Changelog ==
 
+= 1.0.1 (2021-07-13) =
+* Change: Note compatibility through WP 5.7+
+* Change: Add a tad more to the plugin's longer description
+* Change: Update copyright date (2021)
+* Change: Trivial code tweaks
+* Change: Fix typo in inline parameter documentation
+* Change: Unit tests: Move `phpunit/` into `tests/`
+
 = 1.0 (2020-08-07) =
 * Initial release
 
@@ -52,6 +60,9 @@ _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/bu
 
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Trivial update: noted compatibility through WP 5.7+, rearranged unit test files and directories slightly, tweaked some documentation, and updated copyright date (2021).
 
 = 1.0 =
 Initial public release.
