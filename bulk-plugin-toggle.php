@@ -160,7 +160,7 @@ class c2c_Bulk_Plugin_Toggle {
 			}
 		}
 
-		if ( empty( $plugins ) ) {
+		if ( ! $plugins ) {
 			return false;
 		}
 
