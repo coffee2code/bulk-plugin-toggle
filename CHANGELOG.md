@@ -1,5 +1,8 @@
 # Changelog
 
+## _(in-progress)_
+* Change: Note compatibility through WP 5.8+
+
 ## 1.0.1 _(2021-07-13)_
 * Change: Note compatibility through WP 5.7+
 * Change: Add a tad more to the plugin's longer description
