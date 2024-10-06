@@ -40,7 +40,7 @@ The "Toggle" bulk action is only available to users who have both the "activate_
 
 = Does this plugin include unit tests? =
 
-Yes.
+Yes. The tests are not packaged in the release .zip file or included in plugins.svn.wordpress.org, but can be found in the [plugin's GitHub repository](https://github.com/coffee2code/bulk-plugin-toggle/).
 
 
 == Changelog ==
