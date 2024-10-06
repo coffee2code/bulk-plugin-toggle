@@ -6,6 +6,8 @@
 * Change: Tweak formatting in `README.md`
 * New: Add `.gitignore` file
 * Change: Remove development and testing-related files from release packaging
+* Unit tests:
+    * New: Add script to install WP for unit testing
 
 ## 1.0.2 _(2021-11-27)_
 * Change: Note compatibility through WP 5.8+
