@@ -7,6 +7,7 @@
 * New: Add `.gitignore` file
 * Change: Remove development and testing-related files from release packaging
 * Unit tests:
+    * Change: In bootstrap, store path to plugin file constant
     * New: Add script to install WP for unit testing
 
 ## 1.0.2 _(2021-11-27)_

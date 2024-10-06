@@ -6,6 +6,7 @@
  */
 
 define( 'C2C_BULK_PLUGIN_TOGGLE_PLUGIN_DIR', dirname( __DIR__, 2 ) );
+define( 'C2C_BULK_PLUGIN_TOGGLE_PLUGIN_FILE', C2C_BULK_PLUGIN_TOGGLE_PLUGIN_DIR . '/no-browser-nag.php' );
 
 ini_set( 'display_errors', 'on' );
 error_reporting( E_ALL );
@@ -33,7 +34,7 @@ require_once $_tests_dir . '/includes/functions.php';
  * Manually load the plugin being tested.
  */
 function _manually_load_plugin() {
-	require C2C_BULK_PLUGIN_TOGGLE_PLUGIN_DIR . '/bulk-plugin-toggle.php';
+	require C2C_BULK_PLUGIN_TOGGLE_PLUGIN_FILE;
 }
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugin' );
 
