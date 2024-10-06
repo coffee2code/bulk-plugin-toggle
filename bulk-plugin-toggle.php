@@ -91,14 +91,14 @@ class c2c_Bulk_Plugin_Toggle {
 		if ( ! current_user_can( 'activate_plugins' ) ) {
 			$permitted = false;
 			if ( $die_with_error ) {
-				wp_die( __( 'Sorry, you are not allowed to activate plugins for this site.' ) );
+				wp_die( esc_html__( 'Sorry, you are not allowed to activate plugins for this site.' ) );
 			}
 		}
 
 		if ( ! current_user_can( 'deactivate_plugins' ) ) {
 			$permitted = false;
 			if ( $die_with_error ) {
-				wp_die( __( 'Sorry, you are not allowed to deactivate plugins for this site.' ) );
+				wp_die( esc_html__( 'Sorry, you are not allowed to deactivate plugins for this site.' ) );
 			}
 		}
 
@@ -121,7 +121,7 @@ class c2c_Bulk_Plugin_Toggle {
 		&&
 			( ! isset( $_GET['plugin_status'] ) || in_array( $_GET['plugin_status'], $valid_plugin_statuses ) )
 		) {
-			$actions['toggle-selected'] = __( 'Toggle', 'bulk-plugin-toggle' );
+			$actions['toggle-selected'] = esc_html__( 'Toggle', 'bulk-plugin-toggle' );
 		}
 
 		return $actions;
@@ -312,7 +312,7 @@ class c2c_Bulk_Plugin_Toggle {
 
 		printf(
 			'<div id="message" class="updated notice is-dismissible"><p>%s</p></div>' . "\n",
-			__( 'Selected plugins toggled.', 'bulk-plugin-toggle' )
+			esc_html__( 'Selected plugins toggled.', 'bulk-plugin-toggle' )
 		);
 	}
 
