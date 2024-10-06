@@ -1,5 +1,8 @@
 # Changelog
 
+## _(in-progress)_
+* Change: Note compatibility through WP 6.6+
+
 ## 1.0.2 _(2021-11-27)_
 * Change: Note compatibility through WP 5.8+
 * Change: Unit tests: In bootstrap, move definition of constant for plugin file directory to top of file
