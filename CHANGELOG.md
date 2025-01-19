@@ -8,6 +8,7 @@
 * New: Add `.gitignore` file
 * Change: Remove development and testing-related files from release packaging
 * Unit tests:
+    * Hardening: Prevent direct web access to `bootstrap.php`
     * Change: In bootstrap, store path to plugin file constant
     * New: Add script to install WP for unit testing
 

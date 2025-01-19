@@ -5,6 +5,9 @@
  * @package Bulk_Plugin_Toggle
  */
 
+// Prevent web access.
+( php_sapi_name() !== 'cli' ) && die();
+
 define( 'C2C_BULK_PLUGIN_TOGGLE_PLUGIN_DIR', dirname( __DIR__, 2 ) );
 define( 'C2C_BULK_PLUGIN_TOGGLE_PLUGIN_FILE', C2C_BULK_PLUGIN_TOGGLE_PLUGIN_DIR . '/no-browser-nag.php' );
 
