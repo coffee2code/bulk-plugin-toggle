@@ -12,6 +12,7 @@
     * Allow tests to run against current versions of WordPress
     * New: Add `composer.json` for PHPUnit Polyfill dependency
     * Change: Prevent PHP warnings due to missing core-related generated files
+    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
     * Change: In bootstrap, store path to plugin file constant
     * New: Add script to install WP for unit testing
 
