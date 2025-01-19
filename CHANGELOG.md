@@ -3,7 +3,7 @@
 ## _(in-progress)_
 * Change: Prevent translations from containing unintended markup
 * Change: Note compatibility through WP 6.6+
-* Change: Update copyright date (2024)
+* Change: Update copyright date (2025)
 * Change: Tweak formatting in `README.md`
 * New: Add `.gitignore` file
 * Change: Remove development and testing-related files from release packaging
