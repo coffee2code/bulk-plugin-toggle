@@ -42,7 +42,7 @@ class Bulk_Plugin_Toggle_Test extends WP_UnitTestCase {
 
 
 	public function test_plugin_version() {
-		$this->assertEquals( '1.0.2', c2c_Bulk_Plugin_Toggle::version() );
+		$this->assertEquals( '1.0.3', c2c_Bulk_Plugin_Toggle::version() );
 	}
 
 	public function test_class_exists() {

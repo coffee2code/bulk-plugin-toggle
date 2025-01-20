@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 5.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 Adds "Toggle" as a bulk action for the plugins listing to toggle the activation state for selected plugins.
 
@@ -45,6 +45,22 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
 
 == Changelog ==
 
+= 1.0.3 (2025-01-19) =
+* Change: Prevent translations from containing unintended markup
+* Change: Note compatibility through WP 6.7+
+* Change: Update copyright date (2025)
+* Change: Tweak formatting in `README.md`
+* New: Add `.gitignore` file
+* Change: Remove development and testing-related files from release packaging
+* Unit tests:
+    * Hardening: Prevent direct web access to `bootstrap.php`
+    * Allow tests to run against current versions of WordPress
+    * New: Add `composer.json` for PHPUnit Polyfill dependency
+    * Change: Prevent PHP warnings due to missing core-related generated files
+    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
+    * Change: In bootstrap, store path to plugin file constant
+    * New: Add script to install WP for unit testing
+
 = 1.0.2 (2021-11-27) =
 * Change: Note compatibility through WP 5.8+
 * Change: Unit tests: In bootstrap, move definition of constant for plugin file directory to top of file
@@ -57,13 +73,13 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
 * Change: Fix typo in inline parameter documentation
 * Change: Unit tests: Move `phpunit/` into `tests/`
 
-= 1.0 (2020-08-07) =
-* Initial release
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/bulk-plugin-toggle/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+Trivial update: prevented translations from containing unintended markup, noted compatibility through WP 6.7+, removed unit tests from release packaging, and updated copyright date (2025).
 
 = 1.0.2 =
 Trivial update: noted compatibility through WP 5.8+.
